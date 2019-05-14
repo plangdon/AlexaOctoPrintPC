@@ -1,0 +1,183 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "printer buddy",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "to help",
+                        "for help",
+                        "help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PrintStatusIntent",
+                    "slots": [],
+                    "samples": [
+                        "the status",
+                        "status of print",
+                        "status",
+                        "printer status",
+                        "print status"
+                    ]
+                },
+                {
+                    "name": "StopPrintIntent",
+                    "slots": [],
+                    "samples": [
+                        "stop print",
+                        "stop the print",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "StartPrintIntent",
+                    "slots": [],
+                    "samples": [
+                        "start print",
+                        "start the print",
+                        "start"
+                    ]
+                },
+                {
+                    "name": "PausePrintIntent",
+                    "slots": [],
+                    "samples": [
+                        "pause the print",
+                        "pause print"
+                    ]
+                },
+                {
+                    "name": "ResumePrintIntent",
+                    "slots": [],
+                    "samples": [
+                        "resume",
+                        "resume print"
+                    ]
+                },
+                {
+                    "name": "ListPrinterIntent",
+                    "slots": [],
+                    "samples": [
+                        "list",
+                        "list printers",
+                        "what printers are online",
+                        "what printers do I have",
+                        "list my printers"
+                    ]
+                },
+                {
+                    "name": "PickPrinterIntent",
+                    "slots": [
+                        {
+                            "name": "printer",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "{printer}",
+                        "I want {printer}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "PickPrinterIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.1508464181955"
+                    },
+                    "slots": [
+                        {
+                            "name": "printer",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.1508464181955",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want  server {printer} , right?"
+                    }
+                ]
+            }
+        ]
+    }
+}
